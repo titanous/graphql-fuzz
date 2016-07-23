@@ -1,0 +1,5 @@
+
+        query q($input: TestType!) {
+          fieldWithObjectInput(input: $input)
+        }
+	

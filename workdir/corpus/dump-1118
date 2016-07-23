@@ -1,0 +1,5 @@
+
+        query q($input: [String]) {
+          list(input: $input)
+        }
+	

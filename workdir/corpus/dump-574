@@ -1,0 +1,7 @@
+
+      fragment validFragment on Pet {
+        ... {
+          name
+        }
+      }
+    

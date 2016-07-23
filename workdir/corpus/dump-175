@@ -1,0 +1,1 @@
+subscription x($color: Color!) { subscribeToEnum(color: $color) }

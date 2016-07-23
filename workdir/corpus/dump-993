@@ -1,0 +1,22 @@
+,
+				iface, fieldName, ifaceField.Type,
+				object, fieldName, objectField.Type),
+		)
+		if err != nil {
+			return err
+		}
+
+		// Assert each interface field arg is implemented.
+		for _, ifaceArg := range ifaceField.Args {
+			argName := ifaceArg.PrivateName
+			var objectArg *Argument
+			for _, arg := range objectField.Args {
+				if arg.PrivateName == argName {
+					objectArg = arg
+					break
+				}
+			}
+			// Assert interface field arg exists on object field.
+			err = invariant(
+				objectArg != nil,
+				fmt.Sprintf(

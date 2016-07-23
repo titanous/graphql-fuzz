@@ -1,0 +1,6 @@
+
+      fragment differentArgsWithDifferentAliases on Dog {
+        knowsSit: doesKnowCommand(dogCommand: SIT)
+        knowsDown: doesKnowCommand(dogCommand: DOWN)
+      }
+    

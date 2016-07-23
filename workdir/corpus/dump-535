@@ -1,0 +1,6 @@
+
+      fragment interfaceFieldSelection on Pet {
+        __typename
+        name
+      }
+    

@@ -1,0 +1,8 @@
+, ttype.Name(), value)}
+		}
+		return true, nil
+
+	case *Enum:
+		parsedVal := ttype.ParseValue(value)
+		if isNullish(parsedVal) {
+			return false, []string{fmt.Sprintf(

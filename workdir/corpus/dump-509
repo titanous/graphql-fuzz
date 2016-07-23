@@ -1,0 +1,13 @@
+
+        {
+          complicatedArgs {
+            complexArgField(complexArg: {
+              stringListField: ["one", "two"],
+              booleanField: false,
+              requiredField: true,
+              stringField: "foo",
+              intField: 4,
+            })
+          }
+        }
+        

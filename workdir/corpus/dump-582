@@ -1,0 +1,7 @@
+
+      fragment invalidFragment on Pet {
+        ... on String {
+          barks
+        }
+      }
+    

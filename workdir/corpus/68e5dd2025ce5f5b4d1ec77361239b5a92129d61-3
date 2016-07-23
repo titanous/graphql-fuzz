@@ -1,0 +1,1 @@
+query {a{s{...F}s{s{...I}}}}fragment F on T{s{s{...I...T}...I}...f}query {a{s{...e}s{s{...e}}}}fragment e on e{s{s{...e...f}...e...n...f}}fragment e on e{e{...f}}fragment f on e{e}e

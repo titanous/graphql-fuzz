@@ -1,0 +1,1 @@
+Cannot query field "nickname" on type "Pet". However, this field exists on "Cat", "Dog". Perhaps you meant to use an inline fragment?

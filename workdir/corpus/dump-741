@@ -1,0 +1,6 @@
+
+      fragment differentDirectivesWithDifferentAliases on Dog {
+        name @include(if: true)
+        name @include(if: false)
+      }
+    

@@ -1,0 +1,12 @@
+
+      fragment fragA on Pet {
+        ... on Dog {
+          ...fragB
+        }
+      }
+      fragment fragB on Pet {
+        ... on Dog {
+          ...fragA
+        }
+      }
+    

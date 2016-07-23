@@ -1,0 +1,4 @@
+
+      fragment invalidObjectWithinUnion on CatOrDog { ...humanFragment }
+      fragment humanFragment on Human { pets { name } }
+    

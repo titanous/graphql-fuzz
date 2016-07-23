@@ -1,0 +1,5 @@
+
+      query Example {
+        b(numArg: 123, stringArg: "foo")
+      }
+    

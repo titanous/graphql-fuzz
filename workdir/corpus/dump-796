@@ -1,0 +1,4 @@
+
+      fragment objectWithinObject on Dog { ...dogFragment }
+      fragment dogFragment on Dog { barkVolume }
+    

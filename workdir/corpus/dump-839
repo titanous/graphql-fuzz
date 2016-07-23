@@ -1,0 +1,1 @@
+type "HumanOrAlien" can never be of type "Pet".

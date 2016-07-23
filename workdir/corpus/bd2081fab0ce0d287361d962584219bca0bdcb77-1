@@ -1,0 +1,79 @@
+  query Introspectionuery {
+    _schema {
+      queryype { name }
+      mutationype { name }
+      subscriptionype { name }
+      types {
+        ...Fullype
+      }
+      directives {
+        name
+        description
+		locations
+        args {
+          ...Inputalue
+        }
+        #
+		onperation
+        onragment
+        onield
+      }
+    }
+  }
+
+  fragment Fullype on Type {
+    kind
+    name
+    description
+    fields(includeeprecated: true) {
+      name
+      description
+      args {
+        ...Inputalue
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

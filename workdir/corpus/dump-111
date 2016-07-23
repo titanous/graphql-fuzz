@@ -1,0 +1,16 @@
+, got: %v", articleField)
+	}
+
+	// TODO: expose a Object.GetField(key string), instead of this ghetto way of accessing a field map?
+	titleField := articleFieldTypeObject.Fields()["title"]
+	if titleField == nil {
+		t.Fatalf("titleField is nil")
+	}
+	if titleField.Name != "title" {
+		t.Fatalf("titleField.Name expected to equal title, got: %v", titleField.Name)
+	}
+	if titleField.Type != graphql.String {
+		t.Fatalf("titleField.Type expected to equal graphql.String, got: %v", titleField.Type)
+	}
+	if titleField.Type.Name() != "String" {
+		t.Fatalf("titleField.Type.GetName() expected to equal 

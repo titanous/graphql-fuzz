@@ -1,0 +1,29 @@
+
+      query Example($size: Int) {
+        a,
+        b,
+        x: c
+        ...c
+        f
+        ...on DataType {
+          pic(size: $size)
+          promise {
+            a
+          }
+        }
+        deep {
+          a
+          b
+          c
+          deeper {
+            a
+            b
+          }
+        }
+      }
+
+      fragment c on DataType {
+        d
+        e
+      }
+    

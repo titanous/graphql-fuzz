@@ -1,0 +1,1 @@
+{ test(aInt: -123, aStr: "String!") { str, int } }

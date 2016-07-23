@@ -1,0 +1,8 @@
+
+      query Foo {
+        fieldA
+      }
+      subscription Foo {
+        fieldB
+      }
+    

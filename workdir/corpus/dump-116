@@ -1,0 +1,27 @@
+, got: %v", writeMutation.Name)
+	}
+}
+
+func TestTypeSystem_DefinitionExample_DefinesASubscriptionScheme(t *testing.T) {
+	blogSchema, err := graphql.NewSchema(graphql.SchemaConfig{
+		Query:        blogQuery,
+		Subscription: blogSubscription,
+	})
+	if err != nil {
+		t.Fatalf("unexpected error, got: %v", err)
+	}
+
+	if blogSchema.SubscriptionType() != blogSubscription {
+		t.Fatalf("expected blogSchema.SubscriptionType() == blogSubscription")
+	}
+
+	subMutation, _ := blogSubscription.Fields()["articleSubscribe"]
+	if subMutation == nil {
+		t.Fatalf("subMutation is nil")
+	}
+	subMutationType := subMutation.Type
+	if subMutationType != blogArticle {
+		t.Fatalf("subMutationType expected to equal blogArticle, got: %v", subMutationType)
+	}
+	if subMutationType.Name() != "Article" {
+		t.Fatalf("subMutationType.Name expected to equal 

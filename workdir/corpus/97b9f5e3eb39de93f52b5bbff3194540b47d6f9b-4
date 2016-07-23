@@ -1,0 +1,1 @@
+{__type(name:e)}fragment e on __Type{fields(includeDeprecated:e)enumValues(includeDeprecated:e)fields(includeDeprecated:e)enumValues(includeDeprecated:e)}

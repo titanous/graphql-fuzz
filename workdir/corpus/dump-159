@@ -1,0 +1,11 @@
+
+        query Q {
+          a
+          ... on TestType @skip(if: false) {
+            b
+          }
+        }
+        fragment Frag on TestType {
+          b
+        }
+	

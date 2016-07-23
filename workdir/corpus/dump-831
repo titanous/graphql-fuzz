@@ -1,0 +1,6 @@
+
+      fragment invalidInterfaceWithinInterface on Pet {
+        ...intelligentFragment
+      }
+      fragment intelligentFragment on Intelligent { iq }
+    

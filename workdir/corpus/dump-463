@@ -1,0 +1,7 @@
+
+        {
+          complicatedArgs {
+            stringArgField(stringArg: 1.0)
+          }
+        }
+        

@@ -1,0 +1,1 @@
+query ($b:g$a:g){d(a:$a b:$b)d(a:$a b:$b)}

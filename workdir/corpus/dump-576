@@ -1,0 +1,5 @@
+
+      fragment scalarFragment on Boolean {
+        bad
+      }
+    

@@ -1,0 +1,4 @@
+
+      fragment fragB on Dog { ...fragA }
+      fragment fragA on Dog { ...fragB }
+    

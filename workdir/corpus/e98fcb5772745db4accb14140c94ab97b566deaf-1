@@ -1,0 +1,1 @@
+{human{...HumanFields1...on Human{...HumanFields2}...{name}}}fragment HumanFields1 on Human{name...HumanFields3}fragment HumanFields2 on Human{name}fragment HumanFields3 on Human{name}

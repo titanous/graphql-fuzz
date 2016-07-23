@@ -1,0 +1,14 @@
+
+      {
+        human(id: 4) {
+          ...UnknownFragment1
+          ... on Human {
+            ...UnknownFragment2
+          }
+        }
+      }
+      fragment HumanFields on Human {
+        name
+        ...UnknownFragment3
+      }
+    

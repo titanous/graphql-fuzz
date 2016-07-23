@@ -1,0 +1,17 @@
+
+      {
+        __typename
+        name
+        pets {
+          __typename
+          ... on Dog {
+            name
+            barks
+          }
+          ... on Cat {
+            name
+            meows
+          }
+        }
+      }
+	

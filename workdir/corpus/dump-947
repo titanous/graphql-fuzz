@@ -1,0 +1,8 @@
+
+      query Query($stringListVar: [String])
+      {
+        complicatedArgs {
+          stringListArgField(stringListArg: $stringListVar)
+        }
+      }
+    

@@ -1,0 +1,17 @@
+mutation M {
+      first: immediatelyChangeTheNumber(newNumber: 1) {
+        theNumber
+      },
+      second: promiseToChangeTheNumber(newNumber: 2) {
+        theNumber
+      },
+      third: immediatelyChangeTheNumber(newNumber: 3) {
+        theNumber
+      }
+      fourth: promiseToChangeTheNumber(newNumber: 4) {
+        theNumber
+      },
+      fifth: immediatelyChangeTheNumber(newNumber: 5) {
+        theNumber
+      }
+    }

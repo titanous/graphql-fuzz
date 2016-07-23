@@ -1,0 +1,10 @@
+
+      fragment objectFieldSelection on Pet {
+        ... on Dog {
+          name
+        }
+        ... {
+          name
+        }
+      }
+    

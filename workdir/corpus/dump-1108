@@ -1,0 +1,5 @@
+
+        query SetsNonNullable($value: String!) {
+          fieldWithNonNullableStringInput(input: $value)
+        }
+	

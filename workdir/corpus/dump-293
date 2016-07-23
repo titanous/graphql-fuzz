@@ -1,0 +1,16 @@
+
+      {
+        __type(name: "TestEnum") {
+          name
+          trueValues: enumValues(includeDeprecated: true) {
+            name
+          }
+          falseValues: enumValues(includeDeprecated: false) {
+            name
+          }
+          omittedValues: enumValues {
+            name
+          }
+        }
+      }
+    

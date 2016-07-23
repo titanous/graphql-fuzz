@@ -1,0 +1,5 @@
+
+      query InvalidItem($a: [String] = ["one", 2]) {
+        dog { name }
+      }
+    

@@ -1,0 +1,5 @@
+
+      query MissingRequiredField($a: ComplexInput = {intField: 3}) {
+        dog { name }
+      }
+    

@@ -1,0 +1,5 @@
+
+      {
+        field(arg: { f1: "value", f2: "value", f3: "value" })
+      }
+    

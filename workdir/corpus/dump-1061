@@ -1,0 +1,1 @@
+AnotherInterface.field(input:) expects type "String" but AnotherObject.field(input:) provides type "SomeScalar".

@@ -1,0 +1,25 @@
+, ttype.OfType.Name())}
+			}
+			return false, []string{"Expected non-null value, found null."}
+		}
+		return isValidInputValue(value, ttype.OfType)
+	}
+
+	if isNullish(value) {
+		return true, nil
+	}
+
+	switch ttype := ttype.(type) {
+	case *List:
+		itemType := ttype.OfType
+		valType := reflect.ValueOf(value)
+		if valType.Kind() == reflect.Ptr {
+			valType = valType.Elem()
+		}
+		if valType.Kind() == reflect.Slice {
+			messagesReduce := []string{}
+			for i := 0; i < valType.Len(); i++ {
+				val := valType.Index(i).Interface()
+				_, messages := isValidInputValue(val, itemType)
+				for idx, message := range messages {
+					messagesReduce = append(messagesReduce, fmt.Sprintf(

@@ -1,0 +1,38 @@
+
+// TODO: figure out where to organize utils
+// TODO: change to *Schema
+func typeFromAST(schema Schema, inputTypeAST ast.Type) (Type, error) {
+	switch inputTypeAST := inputTypeAST.(type) {
+	case *ast.List:
+		innerType, err := typeFromAST(schema, inputTypeAST.Type)
+		if err != nil {
+			return nil, err
+		}
+		return NewList(innerType), nil
+	case *ast.NonNull:
+		innerType, err := typeFromAST(schema, inputTypeAST.Type)
+		if err != nil {
+			return nil, err
+		}
+		return NewNonNull(innerType), nil
+	case *ast.Named:
+		nameValue := ""
+		if inputTypeAST.Name != nil {
+			nameValue = inputTypeAST.Name.Value
+		}
+		ttype := schema.Type(nameValue)
+		return ttype, nil
+	default:
+		return nil, invariant(inputTypeAST.GetKind() == kinds.Named, "Must be a named type.")
+	}
+}
+
+// isValidInputValue alias isValidJSValue
+// Given a value and a GraphQL type, determine if the value will be
+// accepted for that type. This is primarily useful for validating the
+// runtime values of query variables.
+func isValidInputValue(value interface{}, ttype Input) (bool, []string) {
+	if ttype, ok := ttype.(*NonNull); ok {
+		if isNullish(value) {
+			if ttype.OfType.Name() != "" {
+				return false, []string{fmt.Sprintf(

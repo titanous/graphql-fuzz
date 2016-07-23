@@ -1,0 +1,5 @@
+
+      query RequiredValues($a: Int!, $b: String!) {
+        dog { name }
+      }
+    

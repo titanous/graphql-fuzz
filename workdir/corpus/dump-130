@@ -1,0 +1,6 @@
+, expected, ttype.Error())
+	}
+}
+func TestTypeSystem_DefinitionExample_ProhibitsNilInNonNull(t *testing.T) {
+	ttype := graphql.NewNonNull(nil)
+	expected := 

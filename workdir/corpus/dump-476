@@ -1,0 +1,7 @@
+
+        {
+          complicatedArgs {
+            booleanArgField(booleanArg: "true")
+          }
+        }
+        

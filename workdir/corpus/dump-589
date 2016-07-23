@@ -1,0 +1,14 @@
+
+      {
+        dog {
+          doesKnowCommand(dogCommand: SIT)
+        }
+        human {
+          pet {
+            ... on Dog {
+              doesKnowCommand(dogCommand: SIT)
+            }
+          }
+        }
+      }
+    

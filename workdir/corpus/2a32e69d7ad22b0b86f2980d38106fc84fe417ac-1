@@ -1,0 +1,1 @@
+query y($booleanArg:Boolean){s{d(g:$booleanArg)}}

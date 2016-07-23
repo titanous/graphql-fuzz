@@ -1,0 +1,7 @@
+
+        {
+          dog {
+            doesKnowCommand(dogCommand: "SIT")
+          }
+        }
+        

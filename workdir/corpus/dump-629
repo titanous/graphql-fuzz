@@ -1,0 +1,8 @@
+
+      {
+        ...Foo
+      }
+      fragment Foo on Type {
+        field
+      }
+    

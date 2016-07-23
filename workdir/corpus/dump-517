@@ -1,0 +1,5 @@
+
+      query NullableValues($a: Int, $b: String, $c: ComplexInput) {
+        dog { name }
+      }
+    

@@ -1,0 +1,4 @@
+, got: %v", writeMutationType.Name())
+	}
+	if writeMutation.Name != "writeArticle" {
+		t.Fatalf("writeMutation.Name expected to equal 

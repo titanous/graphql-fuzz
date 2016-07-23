@@ -1,0 +1,1 @@
+fragment F on e{s{...e}}fragment e on e{e{...p}a{s{...FullType}s{s{...u}}}}fragment p on e{s}fragment u on s{e}fragment FullType on e{s{...InputValue}}fragment InputValue on e{e{...f}}fragment f on e{e}

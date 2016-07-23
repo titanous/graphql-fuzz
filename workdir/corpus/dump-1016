@@ -1,0 +1,31 @@
+
+      {
+        __typename
+        name
+        pets { ...PetFields }
+        friends { ...FriendFields }
+      }
+
+      fragment PetFields on Pet {
+        __typename
+        ... on Dog {
+          name
+          barks
+        }
+        ... on Cat {
+          name
+          meows
+        }
+      }
+
+      fragment FriendFields on Named {
+        __typename
+        name
+        ... on Dog {
+          barks
+        }
+        ... on Cat {
+          meows
+        }
+      }
+	

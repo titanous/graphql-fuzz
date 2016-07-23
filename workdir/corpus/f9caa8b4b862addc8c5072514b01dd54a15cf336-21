@@ -1,0 +1,1 @@
+{__type(name:e)}query {a{e{e}e{e}e{e}s{...e}s{s{...e}}}}fragment e on __Type{fields(includeDeprecated:e){s{...e}e{...f}}s{...e}s{...f}enumValues(includeDeprecated:e){n}s{...f}}fragment e on e{e{...f}}fragment f on e{e{e{e{e}}}}

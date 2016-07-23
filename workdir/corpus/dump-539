@@ -1,0 +1,9 @@
+
+      fragment typeKnownAgain on Pet {
+        unknown_pet_field {
+          ... on Cat {
+            unknown_cat_field
+          }
+        }
+      }
+    

@@ -1,0 +1,6 @@
+
+      fragment aliasedObjectFieldSelection on Dog {
+        tn : __typename
+        otherName : name
+      }
+    

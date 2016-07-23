@@ -1,0 +1,1 @@
+BadObject may only implement Interface types, it cannot implement: <nil>.

@@ -1,0 +1,1 @@
+Fields "scalar" conflict because they return conflicting types Int and String!.

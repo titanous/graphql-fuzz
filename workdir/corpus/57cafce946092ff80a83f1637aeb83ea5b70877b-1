@@ -1,0 +1,9 @@
+query HeroNameAndFriendsQuery {
+hero {stringListField
+    id
+    name
+    friends {
+        name
+    }
+}
+}

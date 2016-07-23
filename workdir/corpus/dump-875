@@ -1,0 +1,5 @@
+
+      fragment scalarSelectionsNotAllowedWithDirectives on Dog {
+        name @include(if: true) { isAlsoHumanName }
+      }
+    

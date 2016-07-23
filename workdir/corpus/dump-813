@@ -1,0 +1,4 @@
+
+      fragment invalidObjectWithinInterface on Pet { ...humanFragment }
+      fragment humanFragment on Human { pets { name } }
+    

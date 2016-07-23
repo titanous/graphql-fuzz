@@ -1,0 +1,1 @@
+Cannot query field "name" on type "CatOrDog". However, this field exists on "Being", "Pet", "Canine", "Cat", "Dog". Perhaps you meant to use an inline fragment?

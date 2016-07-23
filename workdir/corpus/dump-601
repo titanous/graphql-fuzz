@@ -1,0 +1,10 @@
+
+      query Foo {
+        name
+        ...Frag
+      }
+
+      fragment Frag on Dog {
+        name
+      }
+    

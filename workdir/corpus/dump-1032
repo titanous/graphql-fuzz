@@ -1,0 +1,1 @@
+SomeScalar must provide both "parseValue" and "parseLiteral" functions.

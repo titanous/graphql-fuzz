@@ -1,0 +1,12 @@
+
+        {
+          someBox {
+            ... on NonNullStringBox1 {
+              scalar
+            }
+            ... on StringBox {
+              scalar
+            }
+          }
+        }
+    

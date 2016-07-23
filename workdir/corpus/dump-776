@@ -1,0 +1,16 @@
+
+      {
+        someBox {
+          ... on SomeBox {
+            deepBox {
+              unrelatedField
+            }
+          }
+          ... on StringBox {
+            deepBox {
+              unrelatedField
+            }
+          }
+        }
+      }
+    

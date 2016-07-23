@@ -1,0 +1,12 @@
+
+      query Q {
+        a
+        ...Frag
+        ...Frag
+      }
+
+      fragment Frag on Type {
+        a,
+        ...Frag
+      }
+    

@@ -1,0 +1,1 @@
+Variable "$input" got invalid value {"a":"foo","b":"bar","c":"baz","extra":"dog"}.

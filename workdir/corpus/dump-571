@@ -1,0 +1,5 @@
+
+      fragment validFragment on Dog {
+        barks
+      }
+    

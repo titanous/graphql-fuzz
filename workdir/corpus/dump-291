@@ -1,0 +1,16 @@
+
+      {
+        __type(name: "TestType") {
+          name
+          trueFields: fields(includeDeprecated: true) {
+            name
+          }
+          falseFields: fields(includeDeprecated: false) {
+            name
+          }
+          omittedFields: fields {
+            name
+          }
+        }
+      }
+    

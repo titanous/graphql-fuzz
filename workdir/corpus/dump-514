@@ -1,0 +1,7 @@
+
+        {
+          dog @include(if: "yes") {
+            name @skip(if: ENUM)
+          }
+        }
+        

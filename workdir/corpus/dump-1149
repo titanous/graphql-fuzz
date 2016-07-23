@@ -1,0 +1,5 @@
+
+	{
+		fieldWithDefaultArgumentValue(input: WRONG_TYPE)
+	}
+	

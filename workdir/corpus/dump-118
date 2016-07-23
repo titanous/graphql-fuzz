@@ -1,0 +1,57 @@
+, got: %v", subMutation.Name)
+	}
+}
+
+func TestTypeSystem_DefinitionExample_IncludesNestedInputObjectsInTheMap(t *testing.T) {
+	nestedInputObject := graphql.NewInputObject(graphql.InputObjectConfig{
+		Name: "NestedInputObject",
+		Fields: graphql.InputObjectConfigFieldMap{
+			"value": &graphql.InputObjectFieldConfig{
+				Type: graphql.String,
+			},
+		},
+	})
+	someInputObject := graphql.NewInputObject(graphql.InputObjectConfig{
+		Name: "SomeInputObject",
+		Fields: graphql.InputObjectConfigFieldMap{
+			"nested": &graphql.InputObjectFieldConfig{
+				Type: nestedInputObject,
+			},
+		},
+	})
+	someMutation := graphql.NewObject(graphql.ObjectConfig{
+		Name: "SomeMutation",
+		Fields: graphql.Fields{
+			"mutateSomething": &graphql.Field{
+				Type: blogArticle,
+				Args: graphql.FieldConfigArgument{
+					"input": &graphql.ArgumentConfig{
+						Type: someInputObject,
+					},
+				},
+			},
+		},
+	})
+	someSubscription := graphql.NewObject(graphql.ObjectConfig{
+		Name: "SomeSubscription",
+		Fields: graphql.Fields{
+			"subscribeToSomething": &graphql.Field{
+				Type: blogArticle,
+				Args: graphql.FieldConfigArgument{
+					"input": &graphql.ArgumentConfig{
+						Type: someInputObject,
+					},
+				},
+			},
+		},
+	})
+	schema, err := graphql.NewSchema(graphql.SchemaConfig{
+		Query:        blogQuery,
+		Mutation:     someMutation,
+		Subscription: someSubscription,
+	})
+	if err != nil {
+		t.Fatalf("unexpected error, got: %v", err)
+	}
+	if schema.Type("NestedInputObject") != nestedInputObject {
+		t.Fatalf(

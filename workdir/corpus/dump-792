@@ -1,0 +1,20 @@
+
+        {
+          connection {
+            ...edgeID
+            edges {
+              node {
+                id: name
+              }
+            }
+          }
+        }
+
+        fragment edgeID on Connection {
+          edges {
+            node {
+              id
+            }
+          }
+        }
+    

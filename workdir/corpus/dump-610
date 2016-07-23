@@ -1,0 +1,6 @@
+
+      query Foo @include(if: true) {
+        name @operationOnly
+        ...Frag @operationOnly
+      }
+    

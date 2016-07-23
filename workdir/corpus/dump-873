@@ -1,0 +1,5 @@
+
+      fragment scalarSelectionsNotAllowedWithArgs on Dog {
+        doesKnowCommand(dogCommand: SIT) { sinceWhen }
+      }
+    

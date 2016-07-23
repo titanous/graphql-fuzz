@@ -1,0 +1,8 @@
+
+      {
+        ...FragA
+      }
+      fragment FragA on Type {
+        field(a: $a)
+      }
+    

@@ -1,0 +1,121 @@
+, objectType.Name()),
+		)
+		if err != nil {
+			return typeMap, err
+		}
+		return typeMap, err
+	}
+	if objectType.Name() == "" {
+		return typeMap, nil
+	}
+
+	typeMap[objectType.Name()] = objectType
+
+	switch objectType := objectType.(type) {
+	case *Union:
+		types := schema.PossibleTypes(objectType)
+		if objectType.err != nil {
+			return typeMap, objectType.err
+		}
+		for _, innerObjectType := range types {
+			if innerObjectType.err != nil {
+				return typeMap, innerObjectType.err
+			}
+			typeMap, err = typeMapReducer(schema, typeMap, innerObjectType)
+			if err != nil {
+				return typeMap, err
+			}
+		}
+	case *Interface:
+		types := schema.PossibleTypes(objectType)
+		if objectType.err != nil {
+			return typeMap, objectType.err
+		}
+		for _, innerObjectType := range types {
+			if innerObjectType.err != nil {
+				return typeMap, innerObjectType.err
+			}
+			typeMap, err = typeMapReducer(schema, typeMap, innerObjectType)
+			if err != nil {
+				return typeMap, err
+			}
+		}
+	case *Object:
+		interfaces := objectType.Interfaces()
+		if objectType.err != nil {
+			return typeMap, objectType.err
+		}
+		for _, innerObjectType := range interfaces {
+			if innerObjectType.err != nil {
+				return typeMap, innerObjectType.err
+			}
+			typeMap, err = typeMapReducer(schema, typeMap, innerObjectType)
+			if err != nil {
+				return typeMap, err
+			}
+		}
+	}
+
+	switch objectType := objectType.(type) {
+	case *Object:
+		fieldMap := objectType.Fields()
+		if objectType.err != nil {
+			return typeMap, objectType.err
+		}
+		for _, field := range fieldMap {
+			for _, arg := range field.Args {
+				typeMap, err = typeMapReducer(schema, typeMap, arg.Type)
+				if err != nil {
+					return typeMap, err
+				}
+			}
+			typeMap, err = typeMapReducer(schema, typeMap, field.Type)
+			if err != nil {
+				return typeMap, err
+			}
+		}
+	case *Interface:
+		fieldMap := objectType.Fields()
+		if objectType.err != nil {
+			return typeMap, objectType.err
+		}
+		for _, field := range fieldMap {
+			for _, arg := range field.Args {
+				typeMap, err = typeMapReducer(schema, typeMap, arg.Type)
+				if err != nil {
+					return typeMap, err
+				}
+			}
+			typeMap, err = typeMapReducer(schema, typeMap, field.Type)
+			if err != nil {
+				return typeMap, err
+			}
+		}
+	case *InputObject:
+		fieldMap := objectType.Fields()
+		if objectType.err != nil {
+			return typeMap, objectType.err
+		}
+		for _, field := range fieldMap {
+			typeMap, err = typeMapReducer(schema, typeMap, field.Type)
+			if err != nil {
+				return typeMap, err
+			}
+		}
+	}
+	return typeMap, nil
+}
+
+func assertObjectImplementsInterface(schema *Schema, object *Object, iface *Interface) error {
+	objectFieldMap := object.Fields()
+	ifaceFieldMap := iface.Fields()
+
+	// Assert each interface field is implemented.
+	for fieldName := range ifaceFieldMap {
+		objectField := objectFieldMap[fieldName]
+		ifaceField := ifaceFieldMap[fieldName]
+
+		// Assert interface field exists on object.
+		err := invariant(
+			objectField != nil,
+			fmt.Sprintf(

@@ -1,0 +1,5 @@
+
+      fragment lyingAliasSelection on Dog {
+        name : nickname
+      }
+    

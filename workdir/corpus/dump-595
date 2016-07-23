@@ -1,0 +1,5 @@
+
+      fragment oneGoodArgOneInvalidArg on Dog {
+        doesKnowCommand(whoknows: 1, dogCommand: SIT, unknown: true)
+      }
+    

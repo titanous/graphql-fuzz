@@ -1,0 +1,13 @@
+
+      query Foo {
+        field
+      }
+
+      mutation Bar {
+        field
+      }
+
+      subscription Baz {
+      	field
+      }
+    

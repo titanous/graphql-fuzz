@@ -1,0 +1,28 @@
+
+      query Foo {
+        human(id: 4) {
+          ...HumanFields1
+        }
+      }
+      query Bar {
+        human(id: 4) {
+          ...HumanFields2
+        }
+      }
+      fragment HumanFields1 on Human {
+        name
+        ...HumanFields3
+      }
+      fragment HumanFields2 on Human {
+        name
+      }
+      fragment HumanFields3 on Human {
+        name
+      }
+      fragment Unused1 on Human {
+        name
+      }
+      fragment Unused2 on Human {
+        name
+      }
+    

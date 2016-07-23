@@ -1,0 +1,4 @@
+
+      fragment invalidInterfaceWithinObject on Cat { ...intelligentFragment }
+      fragment intelligentFragment on Intelligent { iq }
+    

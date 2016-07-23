@@ -1,0 +1,11 @@
+
+        query Q {
+          a
+          ... on TestType @include(if: true) {
+            b
+          }
+        }
+        fragment Frag on TestType {
+          b
+        }
+	

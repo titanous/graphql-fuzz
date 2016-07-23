@@ -1,0 +1,8 @@
+
+      query Query($intArg: Int = 1)
+      {
+        complicatedArgs {
+          nonNullIntArgField(nonNullIntArg: $intArg)
+        }
+      }
+    

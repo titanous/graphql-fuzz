@@ -1,0 +1,4 @@
+
+      fragment invalidInterfaceWithinUnion on HumanOrAlien { ...petFragment }
+      fragment petFragment on Pet { name }
+    

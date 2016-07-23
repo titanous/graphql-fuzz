@@ -1,0 +1,1 @@
+AnotherInterface.field expects type "[String]" but AnotherObject.field provides type "String".

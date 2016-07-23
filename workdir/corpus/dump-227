@@ -1,0 +1,33 @@
+
+      {
+        feed {
+          id,
+          title
+        },
+        article(id: "1") {
+          ...articleFields,
+          author {
+            id,
+            name,
+            pic(width: 640, height: 480) {
+              url,
+              width,
+              height
+            },
+            recentArticle {
+              ...articleFields,
+              keywords
+            }
+          }
+        }
+      }
+
+      fragment articleFields on Article {
+        id,
+        isPublished,
+        title,
+        body,
+        hidden,
+        notdefined
+      }
+	

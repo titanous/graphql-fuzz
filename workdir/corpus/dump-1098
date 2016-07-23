@@ -1,0 +1,5 @@
+
+          query q($input: TestNestedInputObject) {
+            fieldWithNestedObjectInput(input: $input)
+          }
+        

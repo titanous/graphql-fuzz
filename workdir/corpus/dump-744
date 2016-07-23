@@ -1,0 +1,10 @@
+
+      fragment sameAliasesWithDifferentFieldTargets on Pet {
+        ... on Dog {
+          name
+        }
+        ... on Cat {
+          name: nickname
+        }
+      }
+    

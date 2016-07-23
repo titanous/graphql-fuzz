@@ -1,0 +1,7 @@
+
+        {
+          complicatedArgs {
+            idArgField(idArg: 1)
+          }
+        }
+    

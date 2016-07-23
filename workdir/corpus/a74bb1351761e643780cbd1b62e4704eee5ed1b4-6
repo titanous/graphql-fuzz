@@ -1,0 +1,1 @@
+{a{s{...FullType}s{s{...InputValue}}}}fragment FullType on __Type{s{s{...InputValue...TypeRef}...InputValue...TypeRef...TypeRef...TypeRef}}fragment InputValue on __InputValue{e{...TypeRef}}fragment TypeRef on __Type{e{e{e{e}}}}{...{...{x}...{x}...{x}...n x{x}}}

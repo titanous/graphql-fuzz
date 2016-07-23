@@ -1,0 +1,9 @@
+
+      query Foo {
+        field
+      }
+
+      query Bar {
+        field
+      }
+    

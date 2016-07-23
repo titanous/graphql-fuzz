@@ -1,0 +1,5 @@
+
+      fragment scalarFragment on FurColor {
+        bad
+      }
+    

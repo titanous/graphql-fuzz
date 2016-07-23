@@ -1,0 +1,12 @@
+
+      {
+        __typename
+        name
+        friends {
+          __typename
+          name
+          barks
+          meows
+        }
+      }
+	

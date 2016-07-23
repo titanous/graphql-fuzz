@@ -1,0 +1,8 @@
+
+      query Foo {
+        fieldA
+      }
+      mutation Foo {
+        fieldB
+      }
+    

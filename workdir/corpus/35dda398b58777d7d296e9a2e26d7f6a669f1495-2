@@ -1,0 +1,1 @@
+query($a:g){...FragA}query($b:g){...FragB}fragment FragA on e{e{d(a:$a)}o(a:$a)}fragment FragB on e{d(b:$b)}

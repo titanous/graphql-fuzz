@@ -1,0 +1,5 @@
+
+      fragment invalidObjectWithinObjectAnon on Cat {
+        ... on Dog { barkVolume }
+      }
+    

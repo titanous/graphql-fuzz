@@ -1,0 +1,7 @@
+
+        {
+          complicatedArgs {
+            complexArgField(complexArg: { requiredField: true })
+          }
+        }
+        

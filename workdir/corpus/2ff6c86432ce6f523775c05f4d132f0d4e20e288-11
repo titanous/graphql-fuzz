@@ -1,0 +1,1 @@
+{hero{...TypeRef...TypeRef...TypeRef...TypeRef...TypeRef...TypeRef}}fragment TypeRef on __Type{...{x}}

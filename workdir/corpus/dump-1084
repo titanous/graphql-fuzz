@@ -1,0 +1,5 @@
+
+        {
+          fieldWithObjectInput(input: {a: "foo", b: "bar", c: "baz"})
+        }
+	

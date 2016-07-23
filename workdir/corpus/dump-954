@@ -1,0 +1,6 @@
+
+      query Query($boolVar: Boolean = false)
+      {
+        dog @include(if: $boolVar)
+      }
+    

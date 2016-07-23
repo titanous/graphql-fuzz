@@ -1,0 +1,1 @@
+fragment e on e{e{...f}}fragment FullType on e{s{...e...f}}fragment f on e{e{s{...e...e}...e...{s{...FullType}}}}

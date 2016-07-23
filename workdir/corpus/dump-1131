@@ -1,0 +1,5 @@
+
+        query q($input: [String!]) {
+          listNN(input: $input)
+        }
+	

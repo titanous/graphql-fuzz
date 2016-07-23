@@ -1,0 +1,7 @@
+
+      fragment fieldNotDefined on Pet {
+        ... on Dog {
+          meowVolume
+        }
+      }
+    

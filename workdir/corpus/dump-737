@@ -1,0 +1,6 @@
+
+      fragment mergeIdenticalFieldsWithIdenticalArgs on Dog {
+        doesKnowCommand(dogCommand: SIT)
+        doesKnowCommand(dogCommand: SIT)
+      }
+    

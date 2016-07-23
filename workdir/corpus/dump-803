@@ -1,0 +1,4 @@
+
+      fragment interfaceWithinObject on Dog { ...petFragment }
+      fragment petFragment on Pet { name }
+    

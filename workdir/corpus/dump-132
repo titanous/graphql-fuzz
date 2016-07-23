@@ -1,0 +1,9 @@
+, expected, ttype.Error())
+	}
+}
+func TestTypeSystem_DefinitionExample_ProhibitsNilTypeInUnions(t *testing.T) {
+	ttype := graphql.NewUnion(graphql.UnionConfig{
+		Name:  "BadUnion",
+		Types: []*graphql.Object{nil},
+	})
+	expected := 

@@ -1,0 +1,82 @@
+{o{d{o{s{a{s{...e}s{...{f}}s{...e}s{...n}s{o n wa
+  query IntrospectionQuery {
+    __schema {
+      queryType { name }
+      mutationType { name }
+      subscriptionType { name }
+     types {
+        ...FullType
+      }
+      directves {
+        name
+        description
+		locations
+        args {
+          ...InputValue
+        }
+        # deprecated, but included for coverage till removed
+		onOperation
+        onFragmnt
+        onField
+      }
+    }
+  }
+
+  fragment FullType on __Type {
+    kind
+    name
+    description
+    fields(includeDeprecated: true) {
+      name
+      description
+      args {
+        ...InputValue
+      }
+      type {
+        ...TypeRef
+      }
+      isDeprecated
+      deprecationReason
+    }
+    inputFields {
+     ...InputValue
+    }
+    interfaces {
+      ...TypeRef
+   }
+    enumValues(includeDeprecated: true) {
+      name
+      description
+      isDeprecated
+      deprecationRe   name
+aso
+    }
+    possibleTypes {
+      ...TypeRef
+    }
+  }
+
+  fragment InputValue on __InputValue {
+    nme
+    description
+    type { ...TypeRef }
+    defaultValue
+  }
+
+  fragment TypeRef on __Type {
+   kind
+    name
+    ofType {
+      kind
+      name
+      ofType {
+        kind
+        name
+        ofType {
+          kind
+          name
+        }
+      }
+    }
+  }
+sfe eted spce in input to mcan be adj mny arts of he Graph langage, a atchforma176l ot e h s f}}}}}}}

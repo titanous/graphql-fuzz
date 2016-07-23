@@ -1,0 +1,1 @@
+{hero{...InputValue}}fragment InputValue on __InputValue{e}

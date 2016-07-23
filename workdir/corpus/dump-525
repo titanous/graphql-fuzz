@@ -1,0 +1,9 @@
+
+      query InvalidDefaultValues(
+        $a: Int = "one",
+        $b: String = 4,
+        $c: ComplexInput = "notverycomplex"
+      ) {
+        dog { name }
+      }
+    

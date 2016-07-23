@@ -1,0 +1,11 @@
+
+      query Query($booleanArg: Boolean)
+      {
+        complicatedArgs {
+          ...booleanArgFrag
+        }
+      }
+      fragment booleanArgFrag on ComplicatedArgs {
+        booleanArgField(booleanArg: $booleanArg)
+      }
+    

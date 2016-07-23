@@ -1,0 +1,5 @@
+
+      query Query($stringVar: String) {
+        dog @include(if: $stringVar)
+      }
+    

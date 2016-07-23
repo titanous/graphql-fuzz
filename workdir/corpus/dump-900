@@ -1,0 +1,16 @@
+
+      {
+        ...fragA
+        ...fragB
+        ...fragC
+      }
+      fragment fragA on Type {
+        fieldA
+      }
+      fragment fragB on Type {
+        fieldB
+      }
+      fragment fragC on Type {
+        fieldC
+      }
+    

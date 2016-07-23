@@ -1,0 +1,5 @@
+
+      fragment invalidInterfaceWithinInterfaceAnon on Pet {
+        ...on Intelligent { iq }
+      }
+    

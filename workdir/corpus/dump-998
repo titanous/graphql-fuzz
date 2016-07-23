@@ -1,0 +1,24 @@
+,
+					iface, fieldName, argName, ifaceArg.Type,
+					object, fieldName, argName, objectArg.Type),
+			)
+			if err != nil {
+				return err
+			}
+		}
+		// Assert additional arguments must not be required.
+		for _, objectArg := range objectField.Args {
+			argName := objectArg.PrivateName
+			var ifaceArg *Argument
+			for _, arg := range ifaceField.Args {
+				if arg.PrivateName == argName {
+					ifaceArg = arg
+					break
+				}
+			}
+
+			if ifaceArg == nil {
+				_, ok := objectArg.Type.(*NonNull)
+				err = invariant(
+					!ok,
+					fmt.Sprintf(

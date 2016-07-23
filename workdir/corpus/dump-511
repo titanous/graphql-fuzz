@@ -1,0 +1,10 @@
+
+        {
+          complicatedArgs {
+            complexArgField(complexArg: {
+              stringListField: ["one", 2],
+              requiredField: true,
+            })
+          }
+        }
+        

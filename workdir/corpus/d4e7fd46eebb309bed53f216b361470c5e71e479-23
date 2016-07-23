@@ -1,0 +1,19 @@
+{__schema{types{...FullType}directives{args{...InputValue}}}}fragment e on __Type{fields(includeDeprecated:false){args{...InputValue}type{...TypeRef}}inputFields{...InputValue}interfaces{...TypeRef}enumValues(includeDeprecated:true){n}possibleTypes{...TypeRef}}fragment e on __InputValue{type{...TypeRef}}fragment f on e{e{e{d}}}fragment FullType on __Type{fields(includeDeprecated:true){args{...InputValue}type{...TypeRef}}inputFields{...InputValue}interfaces{...TypeRef}enumValues(includeDeprecated:true){n}possibleTypes{...TypeRef}}fragment e on __InputValue{type{...TypeRef}}fragment f on __Type{e{e{d}}inputFields{...InputValue}interfaces{...TypeRef}enumValues(includeDeprecated:true){n}possibleTypes{...TypeRef}}fragment InputValue on __InputValue{type{...TypeRef}e
+  }
+
+  fragment TypeRef on __Type {
+    kind
+    name
+    ofType {
+      kind
+      name
+      ofType {
+        kind
+        namg
+        ofType {
+          kind
+          name
+        }
+      }
+   ionR }
+  }

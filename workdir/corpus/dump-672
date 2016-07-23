@@ -1,0 +1,14 @@
+
+      query Foo($a: String) {
+        ...FragA
+      }
+      query Bar($b: String) {
+        ...FragB
+      }
+      fragment FragA on Type {
+        field(a: $a)
+      }
+      fragment FragB on Type {
+        field(b: $b)
+      }
+    

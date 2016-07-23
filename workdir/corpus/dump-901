@@ -1,0 +1,10 @@
+
+      {
+        ...on Type {
+          fieldA
+        }
+        ...on Type {
+          fieldB
+        }
+      }
+    

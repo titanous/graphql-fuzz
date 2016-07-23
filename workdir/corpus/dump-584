@@ -1,0 +1,5 @@
+
+      fragment argOnRequiredArg on Dog {
+        doesKnowCommand(dogCommand: SIT)
+      }
+    

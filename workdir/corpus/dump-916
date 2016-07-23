@@ -1,0 +1,5 @@
+
+      fragment fragA on Type {
+        field
+      }
+    

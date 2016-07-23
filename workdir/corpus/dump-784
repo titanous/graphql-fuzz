@@ -1,0 +1,1 @@
+Fields "box" conflict because they return conflicting types StringBox and [StringBox].

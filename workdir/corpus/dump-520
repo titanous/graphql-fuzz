@@ -1,0 +1,5 @@
+
+      query UnreachableDefaultValues($a: Int! = 3, $b: String! = "default") {
+        dog { name }
+      }
+    

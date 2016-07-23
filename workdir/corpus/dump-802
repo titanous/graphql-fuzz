@@ -1,0 +1,4 @@
+
+      fragment unionWithinUnion on DogOrHuman { ...catOrDogFragment }
+      fragment catOrDogFragment on CatOrDog { __typename }
+    

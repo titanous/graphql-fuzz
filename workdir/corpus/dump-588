@@ -1,0 +1,5 @@
+
+      fragment noArgOnOptionalArg on Dog {
+        isHousetrained
+      }
+    

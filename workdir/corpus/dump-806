@@ -1,0 +1,4 @@
+
+      fragment interfaceWithinUnion on CatOrDog { ...petFragment }
+      fragment petFragment on Pet { name }
+    

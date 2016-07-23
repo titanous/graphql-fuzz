@@ -1,0 +1,4 @@
+
+      query A($x: Int, $y: String) { __typename }
+      query B($x: String, $y: Int) { __typename }
+    

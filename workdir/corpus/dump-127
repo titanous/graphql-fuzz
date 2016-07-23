@@ -1,0 +1,4 @@
+, test.expected, ttypeStr)
+		}
+		if graphql.IsOutputType(graphql.NewNonNull(test.ttype)) != test.expected {
+			t.Fatalf(

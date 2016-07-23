@@ -1,0 +1,16 @@
+
+        {
+          someBox {
+            ... on IntBox {
+              box: listStringBox {
+                scalar
+              }
+            }
+            ... on StringBox {
+              box: stringBox {
+                scalar
+              }
+            }
+          }
+        }
+    

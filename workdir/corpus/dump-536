@@ -1,0 +1,5 @@
+
+      fragment interfaceFieldSelection on Pet {
+        otherName : name
+      }
+    

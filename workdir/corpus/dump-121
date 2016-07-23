@@ -1,0 +1,27 @@
+, schema.Type("SomeSubtype"))
+	}
+}
+
+func TestTypeSystem_DefinitionExample_StringifiesSimpleTypes(t *testing.T) {
+
+	type Test struct {
+		ttype    graphql.Type
+		expected string
+	}
+	tests := []Test{
+		{graphql.Int, "Int"},
+		{blogArticle, "Article"},
+		{interfaceType, "Interface"},
+		{unionType, "Union"},
+		{enumType, "Enum"},
+		{inputObjectType, "InputObject"},
+		{graphql.NewNonNull(graphql.Int), "Int!"},
+		{graphql.NewList(graphql.Int), "[Int]"},
+		{graphql.NewNonNull(graphql.NewList(graphql.Int)), "[Int]!"},
+		{graphql.NewList(graphql.NewNonNull(graphql.Int)), "[Int!]"},
+		{graphql.NewList(graphql.NewList(graphql.Int)), "[[Int]]"},
+	}
+	for _, test := range tests {
+		ttypeStr := fmt.Sprintf("%v", test.ttype)
+		if ttypeStr != test.expected {
+			t.Fatalf(

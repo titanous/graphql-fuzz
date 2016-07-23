@@ -1,0 +1,4 @@
+, got: %v", subMutationType.Name())
+	}
+	if subMutation.Name != "articleSubscribe" {
+		t.Fatalf("subMutation.Name expected to equal 

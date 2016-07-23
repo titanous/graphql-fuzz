@@ -1,0 +1,4 @@
+
+      fragment invalidObjectWithinObject on Cat { ...dogFragment }
+      fragment dogFragment on Dog { barkVolume }
+    

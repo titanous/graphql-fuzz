@@ -1,0 +1,1 @@
+fragment e on __Type{name name name...InputValue}fragment InputValue on __InputValue{name name name}

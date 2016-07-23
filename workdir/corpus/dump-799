@@ -1,0 +1,4 @@
+
+      fragment objectWithinUnion on CatOrDog { ...dogFragment }
+      fragment dogFragment on Dog { barkVolume }
+    

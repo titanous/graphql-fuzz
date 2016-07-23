@@ -1,0 +1,1 @@
+{__schema{types{...FullType}directives{args{...InputValue}}}}fragment FullType on __Type{fields(d:e){args{...InputValue}type{...TypeRef}}inputFields{...InputValue}interfaces{...TypeRef}s(d:e){n}possibleTypes{...TypeRef}}fragment InputValue on __InputValue{type{...TypeRef}}fragment TypeRef on __Type{e{e{e{e}}}}{...{...{x}...{x}...{x}...on x{x}}}

@@ -1,0 +1,6 @@
+
+      fragment sameAliasesWithDifferentFieldTargets on Dog {
+        fido: name
+        fido: nickname
+      }
+    

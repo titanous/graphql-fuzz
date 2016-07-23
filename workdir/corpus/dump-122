@@ -1,0 +1,22 @@
+, test.expected, ttypeStr)
+		}
+	}
+}
+
+func TestTypeSystem_DefinitionExample_IdentifiesInputTypes(t *testing.T) {
+	type Test struct {
+		ttype    graphql.Type
+		expected bool
+	}
+	tests := []Test{
+		{graphql.Int, true},
+		{objectType, false},
+		{interfaceType, false},
+		{unionType, false},
+		{enumType, true},
+		{inputObjectType, true},
+	}
+	for _, test := range tests {
+		ttypeStr := fmt.Sprintf("%v", test.ttype)
+		if graphql.IsInputType(test.ttype) != test.expected {
+			t.Fatalf(

@@ -1,0 +1,3 @@
+{a{e{e}e{e}e{e}s{...F}s{s s{...I}}}}fragment F on T{s(d:e){e
+n
+{...I}e{...T}n}s{...I}s...f}query y{a{e{e}e{e}e{e}s{...FullType}s{s{...InputValue}}}}fragment FullType on __Type{d(d:e){s{...InputValue}e{...TypeRef}}s{...InputValue}e{...TypeRef}es(d:e){n}p{...TypeRef}}fragment InputValue on __InputValue{e{...TypeRef}}fragment TypeRef on __Type{e{e{e{e}}}}

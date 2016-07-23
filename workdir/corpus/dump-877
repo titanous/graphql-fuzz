@@ -1,0 +1,5 @@
+
+      fragment scalarSelectionsNotAllowedWithDirectivesAndArgs on Dog {
+        doesKnowCommand(dogCommand: SIT) @include(if: true) { sinceWhen }
+      }
+    

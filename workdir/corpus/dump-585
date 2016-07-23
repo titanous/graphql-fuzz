@@ -1,0 +1,5 @@
+
+      fragment multipleArgs on ComplicatedArgs {
+        multipleReqs(req1: 1, req2: 2)
+      }
+    

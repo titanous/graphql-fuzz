@@ -1,0 +1,7 @@
+
+      {
+        dog {
+          isHousetrained(unknownArgument: true)
+        }
+      }
+    

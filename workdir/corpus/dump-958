@@ -1,0 +1,11 @@
+
+      fragment nonNullIntArgFieldFrag on ComplicatedArgs {
+        nonNullIntArgField(nonNullIntArg: $intArg)
+      }
+
+      query Query($intArg: Int) {
+        complicatedArgs {
+          ...nonNullIntArgFieldFrag
+        }
+      }
+    

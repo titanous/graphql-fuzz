@@ -1,0 +1,3 @@
+
+      fragment objectWithinObjectAnon on Dog { ... on Dog { barkVolume } }
+    

@@ -1,0 +1,28 @@
+
+      query Q {
+        nest {
+          sync
+          promise
+          nest {
+            sync
+            promise
+          }
+          promiseNest {
+            sync
+            promise
+          }
+        }
+        promiseNest {
+          sync
+          promise
+          nest {
+            sync
+            promise
+          }
+          promiseNest {
+            sync
+            promise
+          }
+        }
+      }
+	

@@ -1,0 +1,8 @@
+
+      query Foo {
+        name @include(if: true)
+        ...Frag @include(if: true)
+        skippedField @skip(if: true)
+        ...SkippedFrag @skip(if: true)
+      }
+    

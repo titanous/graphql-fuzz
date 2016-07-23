@@ -1,0 +1,1 @@
+fragment F on y{a{s{...FullType}}}fragment FullType on e{s{s{...e}...InputValue}}fragment InputValue on e{e{...TypeRef}}fragment TypeRef on e{e}fragment e on e{e{...f}}fragment f on e{e}

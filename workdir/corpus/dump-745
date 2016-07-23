@@ -1,0 +1,6 @@
+
+      fragment aliasMaskingDirectFieldAccess on Dog {
+        name: nickname
+        name
+      }
+    

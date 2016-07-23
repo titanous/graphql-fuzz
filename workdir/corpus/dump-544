@@ -1,0 +1,7 @@
+
+      fragment deepFieldNotDefined on Dog {
+        unknown_field {
+          deeper_unknown_field
+        }
+      }
+    

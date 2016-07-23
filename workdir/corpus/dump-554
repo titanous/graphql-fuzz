@@ -1,0 +1,5 @@
+
+      fragment notDefinedOnInterface on Pet {
+        tailLength
+      }
+    

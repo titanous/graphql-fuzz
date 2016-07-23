@@ -1,0 +1,6 @@
+
+      fragment mergeIdenticalFields on Dog {
+        name
+        name
+      }
+    

@@ -1,0 +1,1 @@
+{hero{...on Human{f}...InputValue...TypeRef}}fragment InputValue on __InputValue{e}fragment TypeRef on __Type{e}

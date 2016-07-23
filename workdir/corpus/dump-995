@@ -1,0 +1,14 @@
+,
+					iface, fieldName, argName,
+					object, fieldName),
+			)
+			if err != nil {
+				return err
+			}
+
+			// Assert interface field arg type matches object field arg type.
+			// (invariant)
+			err = invariant(
+				isEqualType(ifaceArg.Type, objectArg.Type),
+				fmt.Sprintf(
+					

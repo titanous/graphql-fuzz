@@ -1,0 +1,4 @@
+{
+        colorEnum(fromEnum: RED)
+        colorInt(fromEnum: RED)
+      }

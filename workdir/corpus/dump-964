@@ -1,0 +1,7 @@
+
+      query Query($stringVar: String) {
+        complicatedArgs {
+          booleanArgField(booleanArg: $stringVar)
+        }
+      }
+    

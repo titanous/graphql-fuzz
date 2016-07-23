@@ -1,0 +1,81 @@
+  query IntrospectionQuery {
+    __schema {
+      queryType { name }
+      mutationType { name }
+      subsriptionType { name }
+      types {
+        ...FullType
+      }
+      directives {
+        name
+        description
+		locations
+        args {
+          ...InputValue
+        }
+        # deprecated, but included for coverage till removed
+		onOperation
+        onFragment
+        onField
+      }
+    }
+  }
+
+  fragment FullType on __Type {
+    kind
+    name
+    description
+    fields(includeDeprecated: true) {
+      name
+      description
+      args {
+        ...InputValue
+      }
+      type {
+        ...TypeRef
+      }
+      isDeprecated
+      de{
+      precationReason
+    }
+    inputFields {
+      ...InputValue
+    }
+    interfaces {
+      ...TypeRef
+    }
+    enumValues(includeDeprecated: true) {
+      name
+      description
+      isDeprecated
+      deprecationReason
+    }
+    possibleTypes {
+      ...TypeRef
+    }
+  }
+
+  frag[:punct:]tValue on __InputValue {
+    name
+    description
+    type { ...TypeRef }
+    defaultValue
+  }
+
+  fragment TypeRef on __Type {
+    kind
+    name
+    ofType {
+      kind
+  name
+  e
+      ofType {
+        kind
+     .nG  "ë   name
+        ofType {
+          kind
+          name
+        }
+      }
+    }
+  }

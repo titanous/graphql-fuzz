@@ -1,0 +1,4 @@
+
+      fragment interfaceWithinInterface on Pet { ...beingFragment }
+      fragment beingFragment on Being { name }
+    

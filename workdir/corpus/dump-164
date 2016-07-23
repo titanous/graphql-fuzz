@@ -1,0 +1,8 @@
+
+        query Q {
+          a
+          ... @skip(if: true) {
+            b
+          }
+        }
+	

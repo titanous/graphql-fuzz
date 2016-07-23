@@ -1,0 +1,8 @@
+
+      query Query($boolVar: Boolean = false)
+      {
+        complicatedArgs {
+          complexArgField(complexArg: {requiredArg: $boolVar})
+        }
+      }
+    

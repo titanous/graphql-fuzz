@@ -1,0 +1,5 @@
+
+      fragment inputFragment on ComplexInput {
+        stringField
+      }
+    

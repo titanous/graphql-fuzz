@@ -1,0 +1,22 @@
+, ttype.Name())}
+		}
+		fields := ttype.Fields()
+
+		// to ensure stable order of field evaluation
+		fieldNames := []string{}
+		valueMapFieldNames := []string{}
+
+		for fieldName := range fields {
+			fieldNames = append(fieldNames, fieldName)
+		}
+		sort.Strings(fieldNames)
+
+		for fieldName := range valueMap {
+			valueMapFieldNames = append(valueMapFieldNames, fieldName)
+		}
+		sort.Strings(valueMapFieldNames)
+
+		// Ensure every provided field is defined.
+		for _, fieldName := range valueMapFieldNames {
+			if _, ok := fields[fieldName]; !ok {
+				messagesReduce = append(messagesReduce, fmt.Sprintf(

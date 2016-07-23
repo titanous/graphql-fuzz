@@ -1,0 +1,1 @@
+fragment e on e{e{...f}}fragment FullType on e{s{...e...f}}fragment f on e{s{...e...TypeRef}}fragment TypeRef on e{e{e{e{s{...e...f}...FullType}}}}

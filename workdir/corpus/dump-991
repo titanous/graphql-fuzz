@@ -1,0 +1,11 @@
+, iface, fieldName, object),
+		)
+		if err != nil {
+			return err
+		}
+
+		// Assert interface field type is satisfied by object field type, by being
+		// a valid subtype. (covariant)
+		err = invariant(
+			isTypeSubTypeOf(schema, objectField.Type, ifaceField.Type),
+			fmt.Sprintf(

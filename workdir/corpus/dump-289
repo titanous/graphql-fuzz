@@ -1,0 +1,7 @@
+
+      {
+        __type(name: "TestType") {
+          name
+        }
+      }
+    

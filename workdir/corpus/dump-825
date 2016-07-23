@@ -1,0 +1,4 @@
+
+      fragment invalidUnionWithinUnion on CatOrDog { ...humanOrAlienFragment }
+      fragment humanOrAlienFragment on HumanOrAlien { __typename }
+    

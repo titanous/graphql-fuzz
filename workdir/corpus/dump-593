@@ -1,0 +1,5 @@
+
+      fragment invalidArgName on Dog {
+        doesKnowCommand(unknown: true)
+      }
+    

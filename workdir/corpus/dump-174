@@ -1,0 +1,1 @@
+mutation x($color: Color!) { favoriteEnum(color: $color) }

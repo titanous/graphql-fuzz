@@ -1,0 +1,1 @@
+{__schema{...InputValue...TypeRef...TypeRef...TypeRef}}fragment InputValue on __InputValue{e}fragment TypeRef on __Type{...{x}}

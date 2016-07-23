@@ -1,0 +1,48 @@
+
+      query Q {
+        nest {
+          nonNullNest {
+            nonNullPromiseNest {
+              nonNullNest {
+                nonNullPromiseNest {
+                  nonNullSync
+                }
+              }
+            }
+          }
+        }
+        promiseNest {
+          nonNullNest {
+            nonNullPromiseNest {
+              nonNullNest {
+                nonNullPromiseNest {
+                  nonNullSync
+                }
+              }
+            }
+          }
+        }
+        anotherNest: nest {
+          nonNullNest {
+            nonNullPromiseNest {
+              nonNullNest {
+                nonNullPromiseNest {
+                  nonNullPromise
+                }
+              }
+            }
+          }
+        }
+        anotherPromiseNest: promiseNest {
+          nonNullNest {
+            nonNullPromiseNest {
+              nonNullNest {
+                nonNullPromiseNest {
+                  nonNullPromise
+                }
+              }
+            }
+          }
+        }
+      }
+	

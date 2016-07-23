@@ -1,0 +1,8 @@
+, test.expected, ttypeStr)
+		}
+	}
+}
+
+func TestTypeSystem_DefinitionExample_ProhibitsNestingNonNullInsideNonNull(t *testing.T) {
+	ttype := graphql.NewNonNull(graphql.NewNonNull(graphql.Int))
+	expected := 

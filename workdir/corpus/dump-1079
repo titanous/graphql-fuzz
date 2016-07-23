@@ -1,0 +1,10 @@
+, fieldName))
+			}
+		}
+
+		// Ensure every defined field is valid.
+		for _, fieldName := range fieldNames {
+			_, messages := isValidInputValue(valueMap[fieldName], fields[fieldName].Type)
+			if messages != nil {
+				for _, message := range messages {
+					messagesReduce = append(messagesReduce, fmt.Sprintf(

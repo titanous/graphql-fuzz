@@ -1,0 +1,5 @@
+
+      fragment scalarSelection on Dog {
+        barks
+      }
+    

@@ -1,0 +1,1 @@
+{a{s{...e}s{s{...e}}}}fragment e on e{d{s{...e...{s{...e}...e...TypeRef}s{...e...TypeRef}s{...TypeRef}}...TypeRef}s{...InputValue...TypeRef}s{...TypeRef}}fragment InputValue on e{e{...TypeRef}}fragment TypeRef on e{e}

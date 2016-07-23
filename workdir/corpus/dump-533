@@ -1,0 +1,6 @@
+
+      fragment objectFieldSelection on Dog {
+        __typename
+        name
+      }
+    

@@ -1,0 +1,5 @@
+
+      fragment directFieldSelectionOnUnion on CatOrDog {
+        __typename
+      }
+    

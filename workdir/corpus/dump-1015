@@ -1,0 +1,16 @@
+
+      {
+        __typename
+        name
+        friends {
+          __typename
+          name
+          ... on Dog {
+            barks
+          }
+          ... on Cat {
+            meows
+          }
+        }
+      }
+	

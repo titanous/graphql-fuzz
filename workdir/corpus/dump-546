@@ -1,0 +1,7 @@
+
+      fragment subFieldNotDefined on Human {
+        pets {
+          unknown_field
+        }
+      }
+    

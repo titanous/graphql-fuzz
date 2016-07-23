@@ -1,0 +1,10 @@
+
+        {
+          dog @include(if: true) {
+            name
+          }
+          human @skip(if: false) {
+            name
+          }
+        }
+        

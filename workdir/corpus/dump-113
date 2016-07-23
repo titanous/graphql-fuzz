@@ -1,0 +1,7 @@
+, got: %v", authorField)
+	}
+	if feedFieldList.OfType != blogArticle {
+		t.Fatalf("feedFieldList.OfType expected to equal blogArticle, got: %v", feedFieldList.OfType)
+	}
+	if feedField.Name != "feed" {
+		t.Fatalf("feedField.Name expected to equal 

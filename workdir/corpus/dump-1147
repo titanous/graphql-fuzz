@@ -1,0 +1,5 @@
+
+	query optionalVariable($optional: String) {
+        fieldWithDefaultArgumentValue(input: $optional)
+    }
+	

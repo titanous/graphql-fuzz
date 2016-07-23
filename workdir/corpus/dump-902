@@ -1,0 +1,8 @@
+
+      query Foo {
+        ...Foo
+      }
+      fragment Foo on Type {
+        field
+      }
+    

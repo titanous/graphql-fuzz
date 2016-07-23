@@ -1,0 +1,5 @@
+
+      fragment definedOnImplementorsQueriedOnUnion on CatOrDog {
+        name
+      }
+    

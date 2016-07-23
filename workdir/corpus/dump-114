@@ -1,0 +1,27 @@
+, got: %v", feedField.Name)
+	}
+}
+
+func TestTypeSystem_DefinitionExample_DefinesAMutationScheme(t *testing.T) {
+	blogSchema, err := graphql.NewSchema(graphql.SchemaConfig{
+		Query:    blogQuery,
+		Mutation: blogMutation,
+	})
+	if err != nil {
+		t.Fatalf("unexpected error, got: %v", err)
+	}
+
+	if blogSchema.MutationType() != blogMutation {
+		t.Fatalf("expected blogSchema.GetMutationType() == blogMutation")
+	}
+
+	writeMutation, _ := blogMutation.Fields()["writeArticle"]
+	if writeMutation == nil {
+		t.Fatalf("writeMutation is nil")
+	}
+	writeMutationType := writeMutation.Type
+	if writeMutationType != blogArticle {
+		t.Fatalf("writeMutationType expected to equal blogArticle, got: %v", writeMutationType)
+	}
+	if writeMutationType.Name() != "Article" {
+		t.Fatalf("writeMutationType.Name expected to equal 

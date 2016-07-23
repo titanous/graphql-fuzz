@@ -1,0 +1,13 @@
+
+      {
+        dog @unknown(directive: "value") {
+          name
+        }
+        human @unknown(directive: "value") {
+          name
+          pets @unknown(directive: "value") {
+            name
+          }
+        }
+      }
+    

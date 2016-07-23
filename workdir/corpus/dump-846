@@ -1,0 +1,7 @@
+
+        {
+          complicatedArgs {
+            multipleOpts(opt1: 1)
+          }
+        }
+    

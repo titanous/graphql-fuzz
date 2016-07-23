@@ -1,0 +1,12 @@
+
+      query {
+        catOrDog {
+          ... on Cat {
+            furColor
+          }
+          ... on Dog {
+            isHousetrained
+          }
+        }
+      }
+    

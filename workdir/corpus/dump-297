@@ -1,0 +1,12 @@
+
+      {
+        schemaType: __type(name: "__Schema") {
+          name,
+          description,
+          fields {
+            name,
+            description
+          }
+        }
+      }
+    

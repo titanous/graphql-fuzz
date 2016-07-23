@@ -1,0 +1,12 @@
+, fieldName, message))
+				}
+			}
+		}
+		return (len(messagesReduce) == 0), messagesReduce
+	}
+
+	switch ttype := ttype.(type) {
+	case *Scalar:
+		parsedVal := ttype.ParseValue(value)
+		if isNullish(parsedVal) {
+			return false, []string{fmt.Sprintf(

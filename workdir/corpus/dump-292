@@ -1,0 +1,12 @@
+
+      {
+        __type(name: "TestEnum") {
+          name
+          enumValues(includeDeprecated: true) {
+            name
+            isDeprecated,
+            deprecationReason
+          }
+        }
+      }
+    

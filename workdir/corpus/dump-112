@@ -1,0 +1,10 @@
+, got: %v", titleField.Type.Name())
+	}
+
+	authorField := articleFieldTypeObject.Fields()["author"]
+	if authorField == nil {
+		t.Fatalf("authorField is nil")
+	}
+	authorFieldObject, ok := authorField.Type.(*graphql.Object)
+	if !ok {
+		t.Fatalf("expected authorField.Type to be Object

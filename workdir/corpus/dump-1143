@@ -1,0 +1,5 @@
+
+        query q($input: UnknownType!) {
+          fieldWithObjectInput(input: $input)
+        }
+	

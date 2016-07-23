@@ -1,0 +1,11 @@
+
+      query Foo($var: JumbledUpLetters) {
+        user(id: 4) {
+          name
+          pets { ... on Badger { name }, ...PetFields }
+        }
+      }
+      fragment PetFields on Peettt {
+        name
+      }
+    

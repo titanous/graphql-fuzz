@@ -1,0 +1,45 @@
+, schema.Type("SomeSubtype"))
+	}
+}
+
+func TestTypeSystem_DefinitionExample_IncludesInterfacesThunkSubtypesInTheTypeMap(t *testing.T) {
+
+	someInterface := graphql.NewInterface(graphql.InterfaceConfig{
+		Name: "SomeInterface",
+		Fields: graphql.Fields{
+			"f": &graphql.Field{
+				Type: graphql.Int,
+			},
+		},
+	})
+
+	someSubType := graphql.NewObject(graphql.ObjectConfig{
+		Name: "SomeSubtype",
+		Fields: graphql.Fields{
+			"f": &graphql.Field{
+				Type: graphql.Int,
+			},
+		},
+		Interfaces: (graphql.InterfacesThunk)(func() []*graphql.Interface {
+			return []*graphql.Interface{someInterface}
+		}),
+		IsTypeOf: func(p graphql.IsTypeOfParams) bool {
+			return true
+		},
+	})
+	schema, err := graphql.NewSchema(graphql.SchemaConfig{
+		Query: graphql.NewObject(graphql.ObjectConfig{
+			Name: "Query",
+			Fields: graphql.Fields{
+				"iface": &graphql.Field{
+					Type: someInterface,
+				},
+			},
+		}),
+		Types: []graphql.Type{someSubType},
+	})
+	if err != nil {
+		t.Fatalf("unexpected error, got: %v", err)
+	}
+	if schema.Type("SomeSubtype") != someSubType {
+		t.Fatalf(

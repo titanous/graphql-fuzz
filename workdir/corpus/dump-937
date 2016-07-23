@@ -1,0 +1,5 @@
+
+      query Foo($a: Dog, $b: [[CatOrDog!]]!, $c: Pet) {
+        field(a: $a, b: $b, c: $c)
+      }
+    

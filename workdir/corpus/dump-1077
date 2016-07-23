@@ -1,0 +1,13 @@
+, idx+1, message))
+				}
+			}
+			return (len(messagesReduce) == 0), messagesReduce
+		}
+		return isValidInputValue(value, itemType)
+
+	case *InputObject:
+		messagesReduce := []string{}
+
+		valueMap, ok := value.(map[string]interface{})
+		if !ok {
+			return false, []string{fmt.Sprintf(

@@ -1,0 +1,7 @@
+
+        {
+          complicatedArgs {
+            stringListArgField(stringListArg: "one")
+          }
+        }
+        

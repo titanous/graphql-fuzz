@@ -1,0 +1,12 @@
+{
+      pets {
+        ... on Dog {
+          name
+          woofs
+        }
+        ... on Cat {
+          name
+          meows
+        }
+      }
+    }
